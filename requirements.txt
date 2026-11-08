@@ -1,0 +1,2 @@
+PicImageSearch==3.12.11
+httpx>=0.28.1

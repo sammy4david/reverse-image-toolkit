@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reverse-image-toolkit"
+version = "1.1.0"
+description = "Multi-engine reverse image search and local HTML reporting toolkit"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "PicImageSearch==3.12.11",
+    "httpx>=0.28.1"
+]
+
+[project.scripts]
+reverse-image = "reverse_image:main"
+reverse-image-html = "reverse_image_html:main"
+reverse-image-local = "reverse_image_local:main"
+
+[tool.setuptools]
+py-modules = [
+    "reverse_image",
+    "reverse_image_html",
+    "reverse_image_local",
+    "reverse_image_server",
+    "reverse_image_menu"
+]
